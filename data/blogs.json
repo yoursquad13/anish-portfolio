@@ -1,0 +1,38 @@
+[
+  {
+    "id": "b1",
+    "title": "Stored XSS in Alibaba and Aliexpress",
+    "category": "XSS",
+    "excerpt": "Discovered a stored cross-site scripting vulnerability affecting both Alibaba and Aliexpress platforms.",
+    "date": "Nov 24, 2019",
+    "image": "",
+    "link": "https://blog.anishkhatri.com"
+  },
+  {
+    "id": "b2",
+    "title": "Facebook - Unrestricted File Upload and LFI",
+    "category": "File Upload",
+    "excerpt": "Found unrestricted file upload and local file inclusion vulnerabilities in Facebook's infrastructure.",
+    "date": "Jan 04, 2020",
+    "image": "",
+    "link": "https://blog.anishkhatri.com"
+  },
+  {
+    "id": "b3",
+    "title": "OK.ru UI Spoofing",
+    "category": "UI Spoofing",
+    "excerpt": "Identified a UI spoofing vulnerability in OK.ru that could mislead users.",
+    "date": "Oct 12",
+    "image": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=600&q=80",
+    "link": "https://blog.anishkhatri.com"
+  },
+  {
+    "id": "b4",
+    "title": "Apple Website UI Spoofing",
+    "category": "UI Spoofing",
+    "excerpt": "Discovered a UI spoofing issue on Apple's website that could be exploited for phishing.",
+    "date": "Aug 18",
+    "image": "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=600&q=80",
+    "link": "https://blog.anishkhatri.com"
+  }
+]
