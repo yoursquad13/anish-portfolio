@@ -110,7 +110,7 @@ export function ContactTab() {
           {/* Map */}
           <div className="glass-card overflow-hidden h-56 relative">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3493.4116518118076!2d80.5601243150813!3d28.887208982318023!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39a1aacb908ebbb3%3A0xc3f3453b3beebacb!2sDhangadhi%2C%20Nepal!5e0!3m2!1sen!2sus!4v1677610034636!5m2!1sen!2sus"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56516.27776836498!2d85.29911505!3d27.6588!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19e4b2e1c2f9%3A0x7d0c76f24b2e4b0a!2sLalitpur%2C%20Nepal!5e0!3m2!1sen!2sus!4v1677610034636!5m2!1sen!2sus"
               width="100%"
               height="100%"
               style={{ border: 0, filter: "invert(0.9) hue-rotate(180deg) saturate(0.3) brightness(0.8)" }}
@@ -124,9 +124,9 @@ export function ContactTab() {
           {/* Contact Cards */}
           <div className="space-y-4">
             {[
-              { icon: <MapPin size={18} />, label: "Address", value: "Ratopool 02, Dhangadhi, Kailali, Nepal 10900" },
+              { icon: <MapPin size={18} />, label: "Address", value: "Lalitpur, Nepal" },
               { icon: <Mail size={18} />, label: "Email", value: "info@anishkhatri.com", href: "mailto:info@anishkhatri.com" },
-              { icon: <Phone size={18} />, label: "Phone", value: "+1 234 714 6102", href: "tel:+12347146102" },
+              { icon: <Phone size={18} />, label: "Phone", value: "+977 9705566779", href: "tel:+9779705566779" },
             ].map((item, i) => (
               <motion.div
                 key={i}

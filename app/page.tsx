@@ -1,10 +1,9 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Navigation } from "@/components/Navigation";
 import { MobileNav } from "@/components/MobileNav";
-import { ThemeToggle } from "@/components/ThemeToggle";
 import { HomeTab } from "@/components/tabs/HomeTab";
 import { ResumeTab } from "@/components/tabs/ResumeTab";
 import { PhotosTab } from "@/components/tabs/PhotosTab";
@@ -15,12 +14,53 @@ import { Particles } from "@/components/Particles";
 
 export type TabType = "Home" | "Resume" | "Photos" | "Blog" | "Pay" | "Contact";
 
+const HASH_TO_TAB: Record<string, TabType> = {
+  "": "Home",
+  home: "Home",
+  resume: "Resume",
+  photos: "Photos",
+  blog: "Blog",
+  pay: "Pay",
+  contact: "Contact",
+};
+
+const TAB_TO_HASH: Record<TabType, string> = {
+  Home: "",
+  Resume: "resume",
+  Photos: "photos",
+  Blog: "blog",
+  Pay: "pay",
+  Contact: "contact",
+};
+
+function getTabFromHash(): TabType {
+  if (typeof window === "undefined") return "Home";
+  const hash = window.location.hash.replace("#", "").toLowerCase();
+  return HASH_TO_TAB[hash] || "Home";
+}
+
 export default function Portfolio() {
   const [activeTab, setActiveTab] = useState<TabType>("Home");
   const [isLoaded, setIsLoaded] = useState(false);
 
+  // Read hash on initial load
   useEffect(() => {
+    setActiveTab(getTabFromHash());
     setIsLoaded(true);
+  }, []);
+
+  // Listen for browser back/forward (popstate)
+  useEffect(() => {
+    const onHashChange = () => setActiveTab(getTabFromHash());
+    window.addEventListener("hashchange", onHashChange);
+    return () => window.removeEventListener("hashchange", onHashChange);
+  }, []);
+
+  // Wrap setActiveTab to also update the URL hash
+  const handleSetActiveTab = useCallback((tab: TabType) => {
+    setActiveTab(tab);
+    const hash = TAB_TO_HASH[tab];
+    window.history.pushState(null, "", hash ? `#${hash}` : window.location.pathname);
   }, []);
 
   const renderTab = () => {
@@ -60,9 +100,8 @@ export default function Portfolio() {
           <span className="text-xs font-mono text-[var(--muted)] ml-2 hidden sm:inline">// portfolio v3.0</span>
         </motion.div>
         <div className="flex items-center gap-6">
-          <Navigation activeTab={activeTab} setActiveTab={setActiveTab} />
-          <MobileNav activeTab={activeTab} setActiveTab={setActiveTab} />
-          <ThemeToggle />
+          <Navigation activeTab={activeTab} setActiveTab={handleSetActiveTab} />
+          <MobileNav activeTab={activeTab} setActiveTab={handleSetActiveTab} />
         </div>
       </header>
 
