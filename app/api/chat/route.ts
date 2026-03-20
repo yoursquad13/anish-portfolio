@@ -142,10 +142,19 @@ export async function POST(request: NextRequest) {
     const reply = result.response.text();
 
     return NextResponse.json({ reply });
-  } catch (error) {
+  } catch (error: any) {
     console.error("Chat API error:", error);
+    
+    // Check if it's a quota/billing error from Google
+    if (error?.message?.includes("429") || error?.message?.includes("quota")) {
+      return NextResponse.json(
+        { error: "OpenAI/Gemini API quota exceeded. The website owner needs to check their API billing details." },
+        { status: 429 }
+      );
+    }
+    
     return NextResponse.json(
-      { error: "Something went wrong. Please try again." },
+      { error: "Something went wrong with the AI service. Please try again later." },
       { status: 500 }
     );
   }
