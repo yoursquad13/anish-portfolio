@@ -15,24 +15,9 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Invalid amount' }, { status: 400 });
     }
 
-    // Verify Turnstile token
-    const turnstileToken = request.headers.get('x-turnstile-token');
-    if (turnstileToken) {
-      const verifyRes = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          secret: process.env.TURNSTILE_SECRET_KEY || '',
-          response: turnstileToken,
-        }),
-      });
-      const verifyData = await verifyRes.json();
-      if (!verifyData.success) {
-        return NextResponse.json({ error: 'CAPTCHA verification failed' }, { status: 400 });
-      }
-    }
 
-    const origin = request.headers.get('origin') || 'http://localhost:3000';
+
+    const origin = request.headers.get('origin') || 'https://anish.vip';
     const stripe = getStripe();
 
     const session = await stripe.checkout.sessions.create({

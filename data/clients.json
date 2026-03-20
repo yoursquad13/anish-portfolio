@@ -1,1 +1,50 @@
-[]
+[
+  {
+    "id": "9e186860-25a1-4e74-9d9e-3f28a3f25f79",
+    "name": "Crea8Social",
+    "logo": "https://anishvip.ane.sh/images/clients/client_8.png",
+    "website": "https://www.facebook.com/crea8SOCIAL"
+  },
+  {
+    "id": "727dd4be-5087-4cfe-beb8-ec884043c03c",
+    "name": "TipShow",
+    "logo": "https://anishvip.ane.sh/images/clients/client_7.png",
+    "website": "https://tipshow.net"
+  },
+  {
+    "id": "8714a671-a66d-4d51-b20e-5c4f92fcadcf",
+    "name": "Safsocial",
+    "logo": "https://anishvip.ane.sh/images/clients/client_6.png",
+    "website": "https://safsocial.com"
+  },
+  {
+    "id": "45e4af06-e724-41e0-92f9-ef8cb246342d",
+    "name": "WoWonder",
+    "logo": "https://anishvip.ane.sh/images/clients/client_5.png",
+    "website": "https://wowonder.com"
+  },
+  {
+    "id": "f046fd42-5b05-49fd-80f3-e50695ee5d50",
+    "name": "Apple",
+    "logo": "https://anishvip.ane.sh/images/clients/client_4.png",
+    "website": "https://support.apple.com/en-qa/102813#:~:text=Khatri"
+  },
+  {
+    "id": "b26d26e2-894a-42d3-8952-5d5323bbac7e",
+    "name": "Paypal",
+    "logo": "https://anishvip.ane.sh/images/clients/client_3.png",
+    "website": "https://paypal.com"
+  },
+  {
+    "id": "171bbaed-2c6b-4c2d-a15f-bb7e9276e388",
+    "name": "Alibaba",
+    "logo": "https://anishvip.ane.sh/images/clients/client_2.png",
+    "website": "https://security.alibaba.com"
+  },
+  {
+    "id": "5b3c2dfd-fdf7-4c1d-9af1-b63dd3c115b3",
+    "name": "Facebook",
+    "logo": "https://anishvip.ane.sh/images/clients/client_1.png",
+    "website": "https://facebook.com"
+  }
+]

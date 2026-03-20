@@ -11,6 +11,7 @@ import { BlogTab } from "@/components/tabs/BlogTab";
 import { ContactTab } from "@/components/tabs/ContactTab";
 import { PayTab } from "@/components/tabs/PayTab";
 import { Particles } from "@/components/Particles";
+import { Chatbot } from "@/components/Chatbot";
 
 export type TabType = "Home" | "Resume" | "Photos" | "Blog" | "Pay" | "Contact";
 
@@ -132,6 +133,9 @@ export default function Portfolio() {
           </div>
         </div>
       </footer>
+
+      {/* AI Chatbot */}
+      <Chatbot />
     </div>
   );
 }

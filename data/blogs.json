@@ -1,5 +1,14 @@
 [
   {
+    "id": "67d8cb75-966d-493a-9b25-462889964f88",
+    "title": "Admin account take-over leading to RCE, XSS and more",
+    "category": "SECURITY",
+    "excerpt": "I was able to take over an admin account which made me able to put RCE, XSS and more exploits to the website...",
+    "date": "14 Sep 2022",
+    "image": "https://blog.anishkhatri.com/upload/photos/2022/09/Fi9PmaFZTnDWTWhF6hSr_14_161484021f0d2e39219a29dddf691c7d_image.jpg",
+    "link": "https://blog.anishkhatri.com/lists/admin-10"
+  },
+  {
     "id": "b1",
     "title": "Stored XSS in Alibaba and Aliexpress",
     "category": "XSS",

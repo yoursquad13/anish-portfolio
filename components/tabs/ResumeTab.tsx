@@ -138,7 +138,7 @@ export function ResumeTab() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 whileHover={{ y: -5, borderColor: "var(--color-neon)" }}
                 transition={{ delay: i * 0.05 }}
-                className="glass-card flex items-center justify-center p-6 grayscale transition-all hover:grayscale-0 hover:bg-[rgba(0,255,136,0.02)] h-24"
+                className="glass-card flex items-center justify-center p-6 transition-all hover:bg-[rgba(0,255,136,0.02)] h-24"
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={client.logo} alt={client.name} className="max-w-full max-h-full object-contain filter brightness-90 contrast-125" />

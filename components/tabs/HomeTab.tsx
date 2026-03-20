@@ -12,9 +12,9 @@ const socialLinks = [
 ];
 
 const infoCards = [
-  { icon: <MapPin size={18} className="text-red-400" />, label: "Location", value: "Dhangadhi, Nepal 🇳🇵" },
+  { icon: <MapPin size={18} className="text-red-400" />, label: "Location", value: "Lalitpur, Nepal 🇳🇵" },
   { icon: <Mail size={18} className="text-[var(--color-neon)]" />, label: "Email", value: "info@anishkhatri.com" },
-  { icon: <Phone size={18} className="text-[var(--color-cyan)]" />, label: "Phone", value: "+1 234 714 6102" },
+  { icon: <Phone size={18} className="text-[var(--color-cyan)]" />, label: "Phone", value: "+977 9705566779" },
   { icon: <Globe size={18} className="text-[var(--color-magenta)]" />, label: "Website", value: "anishkhatri.com" },
 ];
 
@@ -32,7 +32,7 @@ export function HomeTab() {
           <div className="absolute -inset-1.5 bg-gradient-to-tr from-[var(--color-neon)] via-[var(--color-cyan)] to-[var(--color-magenta)] rounded-3xl blur opacity-25 group-hover:opacity-60 transition duration-1000 group-hover:duration-200"></div>
           <div className="relative w-64 h-64 lg:w-72 lg:h-72 rounded-3xl overflow-hidden border border-[var(--border)] bg-[#111118] neon-border p-2">
             <Image
-              src="/profile.jpg"
+              src="/profile2.jpg"
               alt="Anish Khatri"
               fill
               className="object-cover rounded-2xl grayscale hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-110"

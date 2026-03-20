@@ -17,6 +17,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://anish.vip"),
   title: {
     default: "Anish Khatri | Freelance Web Developer & Security Researcher",
     template: "%s | Anish Khatri"
@@ -32,7 +33,7 @@ export const metadata: Metadata = {
     siteName: "Anish Khatri Portfolio",
     images: [
       {
-        url: "/og.jpg",
+        url: "https://anish.vip/og.jpg",
         width: 1200,
         height: 630,
         alt: "Anish Khatri Portfolio Open Graph Image",
@@ -46,7 +47,7 @@ export const metadata: Metadata = {
     title: "Anish Khatri | Freelance Web Developer & Security Researcher",
     description: "Explore the portfolio of Anish Khatri, a passionate Freelance Web Developer and Security Researcher. Discover amazing projects, clean code, and cutting-edge security solutions.",
     creator: "@anishkhatri",
-    images: ["/og.jpg"],
+    images: ["https://anish.vip/og.jpg"],
   },
   robots: {
     index: true,
