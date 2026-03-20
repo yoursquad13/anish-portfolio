@@ -1,6 +1,14 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import { NextRequest, NextResponse } from "next/server";
 
+// Handle GET requests (e.g. visiting /api/chat directly in browser)
+export async function GET() {
+  return NextResponse.json(
+    { message: "Anish's AI Chat API. Send a POST request with { messages: [...] } to chat." },
+    { status: 200 }
+  );
+}
+
 // Simple in-memory rate limiter
 const rateLimitMap = new Map<string, { count: number; resetTime: number }>();
 const RATE_LIMIT = 20; // max messages per window

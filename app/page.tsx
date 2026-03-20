@@ -77,6 +77,7 @@ export default function Portfolio() {
   };
 
   return (
+    <>
     <div className="min-h-screen flex flex-col relative overflow-hidden transition-colors duration-300 grid-bg scanlines">
       
       {/* Floating particles */}
@@ -133,9 +134,10 @@ export default function Portfolio() {
           </div>
         </div>
       </footer>
-
-      {/* AI Chatbot */}
-      <Chatbot />
     </div>
+
+    {/* AI Chatbot - outside overflow-hidden container so fixed positioning works */}
+    <Chatbot />
+    </>
   );
 }
